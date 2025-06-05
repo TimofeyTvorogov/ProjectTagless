@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/about_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/primary_color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AboutFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/white_rect">
+
+        <TextView
+            android:id="@+id/about_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/qanellas_medium"
+            android:padding="5dp"
+            android:text="@string/about_about_label"
+            android:textColor="@color/black"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_tv"
+            android:layout_alignLeft="@id/about_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/qanellas_regular"
+            android:padding="5dp"
+            android:text="@string/about_app"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+
+    <Switch
+        android:id="@+id/admin_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Стать добровольцем"
+        android:switchPadding="10dp"
+        android:fontFamily="@font/qanellas_regular"
+        android:checked="true"
+        android:layout_below="@id/description_tv"
+        android:layout_alignLeft="@id/about_tv"
+        android:visibility="gone"
+        />
+
+        <ImageView
+            android:id="@+id/vk_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/about_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp"
+            android:scaleX="1"
+            android:scaleY="1"
+
+            android:src="@drawable/ic_vk_24" />
+        <ImageView
+            android:id="@+id/tg_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_telegram_24"
+            android:layout_alignLeft="@id/about_tv"
+            android:layout_above="@id/vk_iv"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/mail_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tg_iv"
+            android:layout_alignLeft="@id/about_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/vk_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/vk_iv"
+            android:layout_alignBottom="@id/vk_iv"
+            android:layout_marginHorizontal="15dp"
+            android:layout_toRightOf="@id/vk_iv"
+            android:clickable="true"
+            android:text="@string/vk"
+            android:textColor="@color/accent_color"
+            android:textSize="15sp"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:id="@+id/tg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tg_iv"
+            android:layout_alignBottom="@id/tg_iv"
+            android:layout_marginHorizontal="15dp"
+            android:layout_toRightOf="@id/tg_iv"
+            android:clickable="true"
+            android:text="@string/tg"
+            android:textColor="@color/accent_color"
+            android:textSize="15sp"
+
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/mail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/mail_iv"
+            android:layout_alignBottom="@id/mail_iv"
+            android:layout_marginHorizontal="15dp"
+            android:layout_toRightOf="@id/mail_iv"
+            android:text="@string/mail"
+            android:textColor="@color/accent_color"
+            android:textIsSelectable="true"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+        <!--            20sp-->
+        <TextView
+            android:id="@+id/contacts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mail_iv"
+            android:layout_alignLeft="@id/about_tv"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/qanellas_medium"
+            android:padding="5dp"
+
+            android:text="@string/about_questions"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</LinearLayout>

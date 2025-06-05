@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+<RelativeLayout
+    android:id="@+id/add_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_ib"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+
+        android:backgroundTint="@color/accent_color"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp" />
+
+    <TextView
+        android:id="@+id/order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_ib"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/qanellas_medium"
+        android:padding="5dp"
+        android:text="Встаньте рядом с вандализированным объектом"
+        android:textColor="?attr/textColor"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/object_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/add_object_et"
+        android:layout_alignBottom="@id/add_object_et"
+        android:layout_alignParentLeft="true"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+
+        android:src="@drawable/ic_baseline_object" />
+
+    <EditText
+        android:id="@+id/add_object_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_tv"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:layout_toRightOf="@id/object_iv"
+
+        android:hint="Что было испорчено?\n(столб, историческое здание итп)"
+        android:padding="5dp"
+        android:textColorHint="@color/secondary_text_color" />
+
+    <EditText
+        android:id="@+id/add_type_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_object_et"
+        android:layout_toRightOf="@id/type_iv"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+
+        android:hint="Как испорчен объект?\n(расклейка,граффити итп)"
+        android:padding="5dp"
+        android:textColorHint="@color/secondary_text_color" />
+<ImageView
+    android:id="@+id/type_iv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_alignParentLeft="true"
+    android:layout_alignBottom="@id/add_type_et"
+    android:layout_alignTop="@id/add_type_et"
+    android:padding="5dp"
+    android:layout_marginLeft="5dp"
+    android:src="@drawable/ic_baseline_type"
+    />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_vandalism_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_fragment_card_view"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/accent_color"
+        android:fontFamily="@font/qanellas_medium"
+        android:maxLines="1"
+        android:text="добавить случай вандализма"
+        android:textSize="12sp"
+        app:cornerRadius="20dp" />
+
+    <TextView
+        android:id="@+id/upload_image_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_type_et"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/qanellas_medium"
+        android:padding="5dp"
+        android:text="Загрузите фотографию"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_camera_image"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/upload_image_tv"
+        android:layout_toRightOf="@id/upload_image_tv"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="@color/accent_color"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_camera"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_gallery_image"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@id/add_camera_image"
+        android:layout_alignBottom="@+id/add_camera_image"
+        android:layout_toRightOf="@id/add_camera_image"
+        android:layout_marginLeft="10dp"
+        android:layout_alignRight="@id/add_fragment_card_view"
+
+        android:backgroundTint="@color/accent_color"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_add_gallery"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="20dp"
+        android:id="@+id/add_fragment_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/upload_image_tv"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:alpha="0.25"
+            android:src="@drawable/ic_image"
+            app:tint="@color/black" />
+
+        <ImageView
+
+            android:id="@+id/vandalism_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
+</ScrollView>
